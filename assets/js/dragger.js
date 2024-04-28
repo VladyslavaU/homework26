@@ -14,6 +14,8 @@ class Dragger {
         this._slider._SLIDES.forEach((slide) => {
             slide.addEventListener('mousedown', this._startDragging);
             slide.addEventListener('mousemove', this._drag);
+            slide.addEventListener('mouseenter', this._slider.pause);
+            slide.addEventListener('mouseleave', this._slider.play);
         });
     }
 
